@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "spindoctor-qwerty": {
+      "command": "python3",
+      "args": ["./skills/spindoctor-qwerty/scripts/spindoctor_mcp.py"],
+      "cwd": ".",
+      "env": {"PYTHONUTF8": "1", "PYTHONDONTWRITEBYTECODE": "1"}
+    }
+  }
+}
