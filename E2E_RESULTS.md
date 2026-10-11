@@ -59,5 +59,14 @@ library only).
 
 ## Post-push verification
 
-See the commit history: the repository was cloned back from GitHub into a fresh folder, installed with `agy plugin install <clone>`,
-and the stand-in host check was rerun. The result is recorded in the final commit of this file.
+After the push (content commit `ffaf887`), the public repository was cloned back from GitHub into a fresh folder with an empty HOME:
+
+| Check | Result |
+|---|---|
+| Cloned tree vs staged tree | 51/51 files present, byte-identical, no extra files |
+| `agy plugin validate .` on the clone | ok |
+| `agy plugin install <clone>` + `agy agents` | installed; `qwerty-helper` listed |
+| Stand-in host check from the installed clone | host checks 8/8, end-to-end 12/12 (PASS) |
+
+Commits are made through the GitHub connector and show the LKVexa account as committer. The author of the work is
+RUSSELL PHILIP SMITHSON <russellsmithson77@outlook.com> (see NOTICE and COPYRIGHT).
